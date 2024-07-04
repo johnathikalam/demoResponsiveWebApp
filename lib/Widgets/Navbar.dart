@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
@@ -25,38 +26,42 @@ class DesktopNavbar extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
-      padding: EdgeInsets.all(40),
+      color: Colors.white,
+      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children:[
-          Text("Furnish", style:TextStyle(fontSize: 26, fontWeight: FontWeight.w600)),
+          Padding(
+            padding: const EdgeInsets.only(left:30.0),
+            child: Text("Furnish", style:GoogleFonts.raleway(fontSize: 28, fontWeight: FontWeight.w600, color:Colors.black87)),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children:[
-              Text('HOME',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14, color: Colors.amber)),
+              Text('HOME',style: GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 15, color: Colors.amber)),
               SizedBox(width:15),
-              Text('SHOP',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+              Text('SHOP',style: GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 15)),
               SizedBox(width:15),
-              Text('SOFA',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+              Text('SOFA',style: GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 15)),
               SizedBox(width:15),
-              Text('CABINET',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+              Text('CABINET',style: GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 15)),
               SizedBox(width:15),
-              Text('PAGES',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+              Text('PAGES',style: GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 15)),
               SizedBox(width:15),
-              Text('BLOG',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+              Text('BLOG',style: GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 15)),
               SizedBox(width:15),
-              Text('CONTACT',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+              Text('CONTACT',style: GoogleFonts.lato(fontWeight: FontWeight.w600, fontSize: 15)),
             ]
           ),
           Row(
             children: [
-              Icon(Icons.search, size:26,),
+              Icon(Icons.search, size:26, color: Colors.grey,),
               SizedBox(width:10),
-              Icon(Icons.settings_outlined, size:26,),
+              Icon(Icons.settings_outlined, size:26, color: Colors.grey,),
               SizedBox(width:10),
               Stack(
                 children: [
-                  Icon(Icons.shopping_cart_outlined, size:26,),
+                  Icon(Icons.shopping_cart_outlined, size:26, color: Colors.grey,),
                   Positioned(
                     bottom: 10,
                       left:10,
@@ -81,7 +86,8 @@ class TabletNavbar extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
-      padding: EdgeInsets.all(30),
+      //color: Colors.grey.withOpacity(.1),
+      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:[
@@ -90,7 +96,7 @@ class TabletNavbar extends StatelessWidget{
                 IconButton(onPressed: (){},
                     icon: Icon(Icons.menu_outlined, size: 30,)),
                 SizedBox(width:15),
-                Text("Furnish", style:TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
+                Text("Furnish", style:GoogleFonts.raleway(fontSize: 24, fontWeight: FontWeight.w600, color:Colors.black87)),
               ],
             ),
 
@@ -101,9 +107,10 @@ class TabletNavbar extends StatelessWidget{
                   child: TextField(
                     decoration: InputDecoration(
                         filled: true,
-                        fillColor: Colors.black12,
-                        suffixIcon: Icon(Icons.search_rounded),
+                        fillColor: Colors.grey.withOpacity(.2),
+                        suffixIcon: Icon(Icons.search_rounded,),
                         hintText: "search",
+                        hintStyle: TextStyle(color: Colors.grey),
                         border: OutlineInputBorder(
                             borderSide:BorderSide.none,
                             borderRadius: BorderRadius.circular(25)
@@ -112,11 +119,11 @@ class TabletNavbar extends StatelessWidget{
                   ),
                 ),
                 SizedBox(width: 14,),
-                Icon(Icons.settings_outlined, size:26,),
+                Icon(Icons.settings_outlined, size:26, color: Colors.grey,),
                 SizedBox(width:14),
                 Stack(
                   children: [
-                    Icon(Icons.shopping_cart_outlined, size:26,),
+                    Icon(Icons.shopping_cart_outlined, size:26, color: Colors.grey,),
                     Positioned(
                         bottom: 10,
                         left:10,
@@ -140,7 +147,8 @@ class MobileNavbar extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
-      margin: EdgeInsets.all(20),
+      //color: Colors.grey.withOpacity(.1),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:[
@@ -149,19 +157,19 @@ class MobileNavbar extends StatelessWidget{
                 IconButton(onPressed: (){},
                     icon: Icon(Icons.menu_outlined, size: 26,)),
                 SizedBox(width:10),
-                Text("Furnish", style:TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+                Text("Furnish", style:GoogleFonts.raleway(fontSize: 20, fontWeight: FontWeight.w600)),
               ],
             ),
 
             Row(
               children: [
-                Icon(Icons.search_outlined, size:24,),
+                Icon(Icons.search_outlined, size:24, color: Colors.grey,),
                 SizedBox(width: 12,),
-                Icon(Icons.settings_outlined, size:24,),
+                Icon(Icons.settings_outlined, size:24, color: Colors.grey,),
                 SizedBox(width:12),
                 Stack(
                   children: [
-                    Icon(Icons.shopping_cart_outlined, size:24,),
+                    Icon(Icons.shopping_cart_outlined, size:24, color: Colors.grey,),
                     Positioned(
                         bottom: 10,
                         left:10,

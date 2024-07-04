@@ -1,4 +1,5 @@
 import 'package:demo_ecomapp/Widgets/Navbar.dart';
+import 'package:demo_ecomapp/Widgets/Banner.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -10,7 +11,8 @@ class Home extends StatelessWidget {
       body: Container(
         child:Column(
           children:[
-            Navbar()
+            Navbar(),
+            DisplayBanner()
           ]
         )
       )
