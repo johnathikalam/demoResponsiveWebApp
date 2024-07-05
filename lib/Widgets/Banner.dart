@@ -25,12 +25,22 @@ class DesktopBanner extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: 40),
       height:500,
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [Colors.white, Colors.grey.withOpacity(.3)],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         )
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios_sharp)),
+          Image(image: AssetImage("assets/banner_images/chair.png"),width: 350,),
+          Column(),
+          IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward_ios_sharp)),
+        ],
       ),
     );
   }
